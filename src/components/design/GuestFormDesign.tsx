@@ -58,6 +58,7 @@ export default function GuestFormDesign({
           <input
             id="guestName"
             type="text"
+            suppressHydrationWarning
             placeholder="e.g. Ramesh Patel"
             value={guestName}
             onChange={(e) => onNameChange(e.target.value)}
@@ -79,6 +80,7 @@ export default function GuestFormDesign({
             <input
               id="guestPhone"
               type="tel"
+              suppressHydrationWarning
               placeholder="9876543210"
               value={guestPhone}
               maxLength={10}

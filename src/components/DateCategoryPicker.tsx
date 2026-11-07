@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DateCategoryPickerDesign from "./design/DateCategoryPickerDesign";
 import {
   getTodayDateString,
@@ -29,7 +29,12 @@ export default function DateCategoryPicker({
   onSearch,
   loading,
 }: DateCategoryPickerProps) {
-  const minCheckInDate = getTodayDateString();
+  const [minCheckInDate, setMinCheckInDate] = useState("");
+
+  useEffect(() => {
+    setMinCheckInDate(getTodayDateString());
+  }, []);
+
   const minCheckOutDate = getMinCheckOutDate(checkIn);
   const disabled = isSearchDisabled(loading, checkIn, checkOut);
 

@@ -53,6 +53,7 @@ export default function DateCategoryPickerDesign({
           <input
             id="checkIn"
             type="date"
+            suppressHydrationWarning
             min={minCheckInDate}
             value={checkIn}
             onChange={(e) => onCheckInChange(e.target.value)}
@@ -70,6 +71,7 @@ export default function DateCategoryPickerDesign({
           <input
             id="checkOut"
             type="date"
+            suppressHydrationWarning
             min={minCheckOutDate}
             value={checkOut}
             onChange={(e) => onCheckOutChange(e.target.value)}
@@ -86,6 +88,7 @@ export default function DateCategoryPickerDesign({
           </label>
           <select
             id="category"
+            suppressHydrationWarning
             value={category}
             onChange={(e) => onCategoryChange(e.target.value)}
             className="w-full border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 transition"
